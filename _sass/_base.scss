@@ -54,6 +54,11 @@ p {
     background-color: $theme-primary;
 }
 
+.bg-light {
+    background-color: $theme-light;
+    color: black;
+}
+
 .bg-dark {
     background-color: $theme-dark;
     color: white;
@@ -259,7 +264,7 @@ header {
         color: white;
         opacity: 0;
         display: block;
-        background: rgba( $theme-primary, .7 );
+        background: rgba( $theme-primary, .3);
         position: absolute;
         bottom: 0;
         text-align: center;
@@ -270,7 +275,7 @@ header {
             width: 100%;
             text-align: center;
             position: absolute;
-            top: 50%;
+            top: 80%;
             transform: translateY(-50%);
             .project-category,
             .project-name {
@@ -423,3 +428,7 @@ body {
     padding-bottom: 5%;
 }
 
+.gif {
+    width: 100%;
+    height: 100%;
+}
