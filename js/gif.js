@@ -23,3 +23,16 @@ $(function() {
         }                         
     );                  
 });
+
+$(function() {
+    $("#bcbb-box").hover(
+        function() {
+            $("#bcbb-img").attr("src", "../img/portfolio/gifs/bcbb.gif");
+            $("#bcbb-img").attr("class", "img-responsive gif");
+        },
+        function() {
+            $("#bcbb-img").attr("src", "../img/portfolio/Black Can Be Back.png");
+            $("#bcbb-img").attr("class", "img-responsive");
+        }                         
+    );                  
+});

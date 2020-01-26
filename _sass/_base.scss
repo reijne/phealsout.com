@@ -322,6 +322,18 @@ header {
     color: $theme-primary;
 }
 
+.text-dark {
+    color: $theme-dark;
+}
+
+.text-light {
+    color: $theme-light;
+}
+
+.text-white {
+    color: white;
+}
+
 .no-gutter > [class*='col-'] {
     padding-right:0;
     padding-left:0;
@@ -334,6 +346,14 @@ header {
 
 .btn-primary {
     @include button-variant(white, $theme-primary, $theme-primary);
+}
+
+.btn-light {
+    @include button-variant(white, $theme-light, $theme-light);
+}
+
+.btn-dark {
+    @include button-variant(white, $theme-dark, $theme-dark);
 }
 
 .btn {
