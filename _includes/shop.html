@@ -16,7 +16,7 @@
                         <div class="container-fluid overflow-auto">
                             <div class="row no-gutter">
                                 <div class="col-lg-3 col-sm-3 col-xs-6">
-                                    <a href="#" class="portfolio-box">
+                                    <a class="portfolio-box shop-img">
                                         <img src="img/shop/Fast Feeling Colours - A6.jpg" class="img-responsive" alt="">
                                         <div class="portfolio-box-caption stroking_black">
                                             <div class="portfolio-box-caption-content">
@@ -28,7 +28,7 @@
                                     </a>
                                 </div>
                                 <div class="col-lg-3 col-sm-3 col-xs-6">
-                                    <a href="#" class="portfolio-box">
+                                    <a class="portfolio-box shop-img">
                                         <img src="img/shop/portraitman - A6.jpg" class="img-responsive" alt="">
                                         <div class="portfolio-box-caption stroking_black">
                                             <div class="portfolio-box-caption-content">
@@ -40,7 +40,7 @@
                                     </a>
                                 </div>
                                 <div class="col-lg-3 col-sm-3 col-xs-6">
-                                    <a href="#" class="portfolio-box">
+                                    <a class="portfolio-box shop-img">
                                         <img src="img/shop/Wave Of Wonder - A6.jpg" class="img-responsive" alt="">
                                         <div class="portfolio-box-caption stroking_black">
                                             <div class="portfolio-box-caption-content">
@@ -52,7 +52,7 @@
                                     </a>
                                 </div>
                                 <div class="col-lg-3 col-sm-3 col-xs-6">
-                                    <a href="#" class="portfolio-box">
+                                    <a class="portfolio-box shop-img">
                                         <img src="img/shop/Portrait Practice Darker - A6.jpg" class="img-responsive" alt="">
                                         <div class="portfolio-box-caption stroking_black">
                                             <div class="portfolio-box-caption-content">
@@ -64,7 +64,7 @@
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-4 col-xs-6">
-                                    <a href="{{ site.baseurl }}/test.html" class="portfolio-box">
+                                    <a class="portfolio-box shop-img">
                                         <img src="img/shop/Black Can Be Back - A6.jpg" class="img-responsive" alt="">
                                         <div class="portfolio-box-caption stroking_black">
                                             <div class="portfolio-box-caption-content">
@@ -76,9 +76,9 @@
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-4 col-xs-6">
-                                    <a href="#" class="portfolio-box">
+                                    <a class="portfolio-box shop-img">
                                         <img src="img/shop/It's A Starting Matter - A6.jpg" class="img-responsive" alt="">
-                                        <div class="portfolio-box-caption stroking_black">
+                                        <div class="portfolio-box-caption stroking_black" onclick=darken()>
                                             <div class="portfolio-box-caption-content">
                                                 <div class="project-category text-faded">
                                                     It's A Starting Matter
@@ -86,33 +86,66 @@
                                             </div>
                                         </div>
                                     </a>
-                                </div>  
+                                </div>
+                                <div class="col-lg-4 col-sm-4 col-xs-6">
+                                    <a class="portfolio-box shop-img">
+                                        <img src="img/shop/Printing Is What Comes First - A6.jpg" class="img-responsive" alt="">
+                                        <div class="portfolio-box-caption stroking_black">
+                                            <div class="portfolio-box-caption-content">
+                                                <div class="project-category text-faded">
+                                                    What Comes First
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>   
                         </div>
                     </section>
                     
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 col-lg-offset-0 col-sm-8 col-sm-offset-2 col-xs-9 col-xs-offset-2 text-center">
                     <h3 class="stroking_black">What way shape or form?</h3>
                     <hr class="invis">
-                    <div class="btn btn-block btn-primary stroking_black">
-                        <p>Download</p>
-                        <i class="fa fa-4x fa-download wow bounceIn text-dark"></i>
-                        <h6>Full resolution image</h6>
+                    <div class="row btn btn-block btn-primary stroking_black">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 icon">
+                            <i class="fa fa-4x fa-download wow bounceIn text-dark"></i>
+                        </div>
+                        <div class="col-lg-8 shop-text">
+                            <h4>Download</h4>
+                            <h6>Full resolution image</h6>
+                        </div>
                     </div>
-                    <div class="btn btn-block btn-primary stroking_black">
-                        <p>Poster</p> 
-                        <i class="fa fa-4x fa-print wow bounceIn text-dark"></i>
-                        <h6>29.7 x 42.0cm -- 11.69 x 16.53inch</h6>
+                    
+                    <div class="row btn btn-block btn-primary stroking_black">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 icon">
+                            <i class="fa fa-5x fa-print wow bounceIn text-dark"></i>
+                        </div>
+                        <div class="col-lg-8 shop-text">
+                            <h4>Poster</h4> 
+                            <h6>29.7 x 42.0cm</h6>
+                            <h6>11.69 x 16.53inch</h6>       
+                        </div>
                     </div>
-                    <div class="btn btn-block btn-primary stroking_black">
-                        <p>Canvas</p>
-                        <i class="fa fa-4x fa-image wow bounceIn text-dark"></i>
-                        <h6>30 x 40cm -- 11.8 x 15.8inch</h6>
+
+                    <div class="row btn btn-block btn-primary stroking_black">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 icon">
+                            <i class="fa fa-5x fa-image wow bounceIn text-dark"></i>
+                        </div>
+                        <div class="col-lg-8 shop-text">
+                            <h4>Canvas</h4>
+                            <h6>30 x 40cm</h6>
+                            <h6>11.8 x 15.8inch</h6>
+                        </div>
                     </div>
                     <hr class="invis">
-                    <div id="add-to-cart" class="btn btn-block btn-default">
-                        <h5>Add to cart</h5>
-                        <i class="fa fa-4x fa-cart-plus wow bounceIn text-dark"></i>
+
+                    <div id="add-to-cart" class="row btn btn-block btn-default">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <i class="fa fa-4x fa-cart-plus wow bounceIn text-dark"></i>
+                        </div>
+                        <div class="col-lg-8 shop-text icon">
+                            <h4>Add to cart</h4>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -38,6 +38,7 @@ $theme-highlight:       rgb(0, 255, 255);
 $theme-light:         rgb(210, 198, 255);
 $theme-primary:         rgb(52, 0, 134);
 $theme-dark:            rgb(26, 0, 74);
+$theme-black:           rgba($color: #0e0e0e, $alpha: 1);
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

@@ -37,12 +37,20 @@
            </div>
 
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2  text-center stroking_black topbotpad">
-                <h3 class="stroking_black">Let's draw together!</h3>
-                <h5 class="stroking_black">Submit an image with your very own lines and name</h5>
-                <h6>Do this by making a hidden post on imgur and submitting the link below</h6>
-                <div class="btn btn-block btn-primary stroking_black">
+                <h2 class="stroking_black">Let's draw together!</h2>
+                <h4 class="stroking_black">Submit an image with your very own lines and name</h4>
+                <h5>Do this by making a hidden post on imgur and submitting the link below</h5>
+                <div class="btn btn-xl btn-primary stroking_black" onclick="toggle_url_form()">
                     <i class="fa fa-4x fa-upload wow bounceIn text-dark"></i>
-                </div>  
+                </div>
+                <div id="url-form" class="url-form stroking_black">
+                    <hr class="invis">
+                    <form>
+                        <h5>Imgur url:</h5>
+                        <input class="btn-block text-light text-center" type="url" name="imgur-url"><br>
+                        <input class="btn btn-xl btn-primary" type="submit">
+                    </form>  
+                </div>
             </div>
            
            

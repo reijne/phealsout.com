@@ -1,37 +1,46 @@
-<div class="shopping-cart">
-    <!-- Title -->
-    <div class="title">
-      Shopping Bag
+<section id="cart" class="bg-black">
+    <div class="row no-gutter nomarge">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading stroking_black">Shopping Cart</h2>
+            <hr>
+            <p class="stroking_black">Here's what you've gathered so far:</p>
+        </div>
     </div>
-   
-    <!-- Product #1 -->
-    <div class="item">
-      <div class="buttons">
-        <span class="delete-btn"></span>
-        <span class="like-btn"></span>
-      </div>
-   
-      <div class="image">
-        <img src="item-1.png" alt="" />
-      </div>
-   
-      <div class="description">
-        <span>Common Projects</span>
-        <span>Bball High</span>
-        <span>White</span>
-      </div>
-   
-      <div class="quantity">
-        <button class="plus-btn" type="button" name="button">
-          <img src="plus.svg" alt="" />
-        </button>
-        <input type="text" name="name" value="1">
-        <button class="minus-btn" type="button" name="button">
-          <img src="minus.svg" alt="" />
-        </button>
-      </div>
-   
-      <div class="total-price">$549</div>
+
+    <hr class="invis">
+
+    <div class="row nomarge"> <!-- Horizontal template -->
+        <div class="col-lg-2 col-lg-offset-1 text-center">
+            <img src="img/shop/It's A Starting Matter - A6.jpg" class="img-responsive" alt="">
+        </div>
+        <div class="col-lg-4">
+            <h4>Title</h4>
+            <h5>Type</h5>
+        </div>
+        <div class="col-lg-4">
+            <!-- number of items and price -->
+            <div class="row"> 
+                <button class="plus col-lg-2 btn btn-primary">
+                    +
+                </button>
+                <div class="col-lg-2 count-div text-center">
+                    <input class="count" type="number" name="count" value="1">
+                </div>
+                <button class="minus col-lg-2 btn btn-primary">
+                    -
+                </button>
+                <div class="col-lg-1 col-lg-offset-1 text-center">
+                    <h4>€</h4>
+                </div>
+                <div class="price col-lg-3">
+                    <h1 class="none">39.99</h1>
+                    <h5>39.99</h5>
+                </div>
+                <div class="col-lg-1">
+                    <i class="fa fa-lg fa-trash wow"></i>
+                </div>
+            </div>
+        </div>
     </div>
-       
-  </div>
+    
+</section>
