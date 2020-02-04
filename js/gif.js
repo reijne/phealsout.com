@@ -1,3 +1,4 @@
+// Portfolio: On hover change src to gif
 $(function() {
     $("#portraitman-box").hover(
         function() {
@@ -63,6 +64,7 @@ $(function() {
     );                  
 });
 
+// Functionality to submit a link
 function toggle_url_form() {
     var urlForm = document.getElementById("url-form");
     if (urlForm.style.display === "block") {
@@ -72,6 +74,7 @@ function toggle_url_form() {
     }
 };
 
+// Plus and minus functionality, adding or subtracting an item in the cart
 $(".minus").on("click", function(e) {
     e.preventDefault();
     var $this = $(this);
@@ -105,6 +108,7 @@ $(".plus").on("click", function(e) {
     update_price($this, count)
 });
 
+// Update the price displayed in shopping cart
 function update_price($this, count) {
     var $price_tag = $this.closest("div").find("h1");
     var original_price = parseFloat($price_tag[0].innerText)
@@ -113,13 +117,29 @@ function update_price($this, count) {
     $this.closest("div").find("h5")[0].innerHTML = price
 }
 
-function darken() {
-    var $this = $(this);
-    console.log($this)
-    this.style.backgroundColour = "rgba(52, 0, 134, .3)";
+// Highlight selected shop item
+$("div.portfolio-box-caption").click(function() {
+    $(".img-shadow").removeClass("img-shadow");
+    $overlay = $(this).closest("a").find("div.overlay")
+    // console.log($overlay)
+    $overlay.addClass("img-shadow");
+    // TODO add the current selected item to cookies
+    $image = $(this).closest("a").find("img")[0]
+    // console.log($image.id)
+    document.cookie = "selected=" + $image.id + ";"
+    show_cookies();
+});
+
+// Highlight form button
+$("div.btn-form").click(function() {
+    $(".btn-shadow").removeClass("btn-shadow");
+    $(this).addClass("btn-shadow");
+});
+
+function show_cookies() {
+    console.log(document.cookie)
 }
 
-$("div.portfolio-box-caption-content").on("click", function(e) {
-    var $this = $(this);
-    console.log($this)
-});
+function add_to_cart() {
+
+}
