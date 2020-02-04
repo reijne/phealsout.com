@@ -70,6 +70,9 @@ function toggle_url_form() {
     } else {
         urlForm.style.display = "block"
     }
+
+    var linkBtn = document.getElementById("link-btn");
+    linkBtn.style.display = "none";
 };
 
 $(".minus").on("click", function(e) {
@@ -102,10 +105,15 @@ $(".plus").on("click", function(e) {
     }
  
     $input.val(count);
-    update_price($this, count)
+    update_price(this, count)
 });
 
-function update_price($this, count) {
+function update_price(this, count) {
+    // TODO update on input and get price from DB
+    var $this = $(this);
+    var $input = $this.closest("div").find("input");
+    var count = parseInt($input.val());
+    console.log($this)
     var $price_tag = $this.closest("div").find("h1");
     var original_price = parseFloat($price_tag[0].innerText)
 
