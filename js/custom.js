@@ -64,6 +64,25 @@ $(function() {
     );                  
 });
 
+$(".img-box").on("hover", function(e) {
+    var $this = $(this);
+    var $img = $this.closest("a").find("img");
+    $img.attr("src", "../img/portfolio/gifs/" + $img.id + ".gif");
+});
+
+$(function() {
+    $("div.img-box").hover(
+        function() {
+            $("#tsn-img").attr("src", "../img/portfolio/gifs/tsn.gif");
+            $("#tsn-img").attr("class", "img-responsive gif");
+        },
+        function() {
+            $("#tsn-img").attr("src", "../img/portfolio/Trying Something New.png");
+            $("#tsn-img").attr("class", "img-responsive");
+        }                         
+    );                  
+});
+
 // Functionality to submit a link
 function toggle_url_form() {
     var urlForm = document.getElementById("url-form");
@@ -112,9 +131,9 @@ $(".plus").on("click", function(e) {
 });
 
 // Update the price displayed in shopping cart<<<<<<< HEAD:js/custom.js
-function update_price(this, count) {
+function update_price($this, count) {
     // TODO update on input and get price from DB
-    var $this = $(this);
+    // var $this = $(this);
     var $input = $this.closest("div").find("input");
     var count = parseInt($input.val());
     console.log($this);
