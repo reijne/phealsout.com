@@ -1,87 +1,21 @@
 // Portfolio: On hover change src to gif
-$(function() {
-    $("#portraitman-box").hover(
-        function() {
-            $("#portraitman").attr("src", "../img/portfolio/gifs/portraitman.gif");
-            $("#portraitman").attr("class", "img-responsive gif");
-        },
-        function() {
-            $("#portraitman").attr("src", "../img/shop/portraitman - A6.jpg");
-            $("#portraitman").attr("class", "img-responsive");
-        }                         
-    );                  
-});
-
-$(function() {
-    $("#ffc-box").hover(
-        function() {
-            $("#ffc-img").attr("src", "../img/portfolio/gifs/ffc.gif");
-            $("#ffc-img").attr("class", "img-responsive gif");
-        },
-        function() {
-            $("#ffc-img").attr("src", "../img/shop/Fast Feeling Colours - A6.jpg");
-            $("#ffc-img").attr("class", "img-responsive");
-        }                         
-    );                  
-});
-
-$(function() {
-    $("#bcbb-box").hover(
-        function() {
-            $("#bcbb-img").attr("src", "../img/portfolio/gifs/bcbb.gif");
-            $("#bcbb-img").attr("class", "img-responsive gif");
-        },
-        function() {
-            $("#bcbb-img").attr("src", "../img/shop/Black Can Be Back - A6.jpg");
-            $("#bcbb-img").attr("class", "img-responsive");
-        }                         
-    );                  
-});
-
-$(function() {
-    $("#wow-box").hover(
-        function() {
-            $("#wow-img").attr("src", "../img/portfolio/gifs/wow.gif");
-            $("#wow-img").attr("class", "img-responsive gif");
-        },
-        function() {
-            $("#wow-img").attr("src", "../img/shop/Wave Of Wonder - A6.jpg");
-            $("#wow-img").attr("class", "img-responsive");
-        }                         
-    );                  
-});
-
-$(function() {
-    $("#tsn-box").hover(
-        function() {
-            $("#tsn-img").attr("src", "../img/portfolio/gifs/tsn.gif");
-            $("#tsn-img").attr("class", "img-responsive gif");
-        },
-        function() {
-            $("#tsn-img").attr("src", "../img/portfolio/Trying Something New.png");
-            $("#tsn-img").attr("class", "img-responsive");
-        }                         
-    );                  
-});
-
-$(".img-box").on("hover", function(e) {
+$(".img-box").hover(function() {
     var $this = $(this);
-    var $img = $this.closest("a").find("img");
-    $img.attr("src", "../img/portfolio/gifs/" + $img.id + ".gif");
+    change_src($this, "gif")
+}, function() {
+    var $this = $(this);
+    change_src($this, "jpg")
 });
 
-$(function() {
-    $("div.img-box").hover(
-        function() {
-            $("#tsn-img").attr("src", "../img/portfolio/gifs/tsn.gif");
-            $("#tsn-img").attr("class", "img-responsive gif");
-        },
-        function() {
-            $("#tsn-img").attr("src", "../img/portfolio/Trying Something New.png");
-            $("#tsn-img").attr("class", "img-responsive");
-        }                         
-    );                  
-});
+function change_src($this, format) {
+    var $img = $this.closest("div.portfolio-box").find("img.portfolio-img");
+    if (format == "gif") {
+        $img[0].src = "../img/portfolio/gifs/" + $img[0].id + ".gif"
+    }
+    else {
+        $img[0].src = "../img/portfolio/" + $img[0].id + ".jpg"
+    }
+}
 
 // Functionality to submit a link
 function toggle_url_form() {
@@ -95,6 +29,8 @@ function toggle_url_form() {
     var linkBtn = document.getElementById("link-btn");
     linkBtn.style.display = "none";
 };
+
+// TODO Write link upload to db func
 
 // Plus and minus functionality, adding or subtracting an item in the cart
 $(".minus").on("click", function(e) {
@@ -130,7 +66,7 @@ $(".plus").on("click", function(e) {
     update_price(this, count)
 });
 
-// Update the price displayed in shopping cart<<<<<<< HEAD:js/custom.js
+// Update the price displayed in shopping cart
 function update_price($this, count) {
     // TODO update on input and get price from DB
     // var $this = $(this);
@@ -148,11 +84,12 @@ function update_price($this, count) {
 $("div.portfolio-box-caption").click(function() {
     $(".img-shadow").removeClass("img-shadow");
     $overlay = $(this).closest("a").find("div.overlay")
-    // console.log($overlay)
     $overlay.addClass("img-shadow");
-    // TODO add the current selected item to cookies
     $image = $(this).closest("a").find("img")[0]
-    // console.log($image.id)
+    if ($image == null) {
+        return
+    }
+    // TODO add the current selected item to cookies
     document.cookie = "selected=" + $image.id + ";"
     show_cookies();
 });
@@ -161,6 +98,7 @@ $("div.portfolio-box-caption").click(function() {
 $("div.btn-form").click(function() {
     $(".btn-shadow").removeClass("btn-shadow");
     $(this).addClass("btn-shadow");
+    // TODO add the current selected item to cookies
 });
 
 function show_cookies() {
